@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  db:
+    image: mariadb:10.5
+    environment:
+      MYSQL_ROOT_PASSWORD: bili_db
+      MYSQL_DATABASE: bili_db
+      MYSQL_USER: bili_db
+      MYSQL_PASSWORD: bili_db
+      MYSQL_INITDB_SKIP_TZINFO: 1
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db:/var/lib/mysql
+
+  php_my_admin:
+    image: phpmyadmin/phpmyadmin:4.8
+    container_name: bili_php_my_admin
+    depends_on:
+      - db
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+

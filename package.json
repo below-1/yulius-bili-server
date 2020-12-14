@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "fastify": "^3.8.0",
+    "fastify-blipp": "^3.0.0",
+    "fastify-cors": "^5.0.0",
+    "fastify-multer": "^2.0.2",
+    "fastify-plugin": "^3.0.0",
+    "fastify-static": "^3.3.0",
+    "knex": "^0.21.12",
+    "lodash": "^4.17.20",
+    "mysql": "^2.18.1",
+    "nunjucks": "^3.2.2",
+    "point-of-view": "^4.6.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
